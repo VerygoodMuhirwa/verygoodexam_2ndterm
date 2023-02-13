@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
-// API to do addition of list of numbers and return their sum
+//this is an api that will handle all requests about addition
 app.get('/addition', (req, res) => {
   const numbers = req.query.numbers;
   let sum = 0;
@@ -16,8 +15,7 @@ app.get('/addition', (req, res) => {
     res.status(400).send({ error: 'Please provide a list of numbers' });
   }
 });
-
-// API to do multiplication of an array of numbers and return the product
+//this is the api that will handle multiplication requests
 app.get('/multiplication', (req, res) => {
   const numbers = req.query.numbers;
   let product = 1;
